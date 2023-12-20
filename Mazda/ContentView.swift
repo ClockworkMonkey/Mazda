@@ -13,6 +13,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
             if let carStatus = carStatusViewModel.carStatus?.data {
                 VStack {
                     Text("在线状态：\(carStatus.online)")
@@ -46,11 +48,10 @@ struct ContentView: View {
                     Text("后备箱：\(carStatus.door.trunk)")
                 }
             }
-            Button(action: {
-                carStatusViewModel.getCarStatus()
-            }, label: {
-                Text("获取车辆状态")
-            })
+            
+            Spacer()
+            
+            Text(carStatusViewModel.status)
         }
     }
 }
