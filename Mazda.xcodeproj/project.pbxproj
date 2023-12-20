@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C603F8EF2B301CE9005A8B0A /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8EE2B301CE9005A8B0A /* ResultModel.swift */; };
+		C603F8F32B317BA8005A8B0A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8F22B317BA8005A8B0A /* Service.swift */; };
+		C603F8F92B3186AA005A8B0A /* ServiceEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */; };
+		C603F8FB2B319437005A8B0A /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8FA2B319437005A8B0A /* ServiceConfiguration.swift */; };
+		C603F8FD2B31952E005A8B0A /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */; };
+		C603F9012B327D09005A8B0A /* ServiceRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9002B327D09005A8B0A /* ServiceRequestBuilder.swift */; };
+		C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9042B32955C005A8B0A /* UserViewModel.swift */; };
+		C603F9072B32BF0E005A8B0A /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9062B32BF0E005A8B0A /* ServiceError.swift */; };
+		C63DD7DD2B2934A40090858C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C63DD7DC2B2934A40090858C /* Alamofire */; };
 		C65180B02B289DC1001CF33B /* MazdaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180AF2B289DC1001CF33B /* MazdaApp.swift */; };
 		C65180B22B289DC1001CF33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180B12B289DC1001CF33B /* ContentView.swift */; };
 		C65180B42B289DC2001CF33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65180B32B289DC2001CF33B /* Assets.xcassets */; };
@@ -34,6 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C603F8EE2B301CE9005A8B0A /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		C603F8F22B317BA8005A8B0A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEnvironment.swift; sourceTree = "<group>"; };
+		C603F8FA2B319437005A8B0A /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
+		C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		C603F9002B327D09005A8B0A /* ServiceRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestBuilder.swift; sourceTree = "<group>"; };
+		C603F9042B32955C005A8B0A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		C603F9062B32BF0E005A8B0A /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		C65180AC2B289DC1001CF33B /* Mazda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65180AF2B289DC1001CF33B /* MazdaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaApp.swift; sourceTree = "<group>"; };
 		C65180B12B289DC1001CF33B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C63DD7DD2B2934A40090858C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C603F9082B32C0D5005A8B0A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C603F9042B32955C005A8B0A /* UserViewModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C63DD7D92B2934480090858C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C603F8EE2B301CE9005A8B0A /* ResultModel.swift */,
+				C603F8F22B317BA8005A8B0A /* Service.swift */,
+				C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */,
+				C603F8FA2B319437005A8B0A /* ServiceConfiguration.swift */,
+				C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */,
+				C603F9002B327D09005A8B0A /* ServiceRequestBuilder.swift */,
+				C603F9062B32BF0E005A8B0A /* ServiceError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C65180A32B289DC1001CF33B = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +135,8 @@
 		C65180AE2B289DC1001CF33B /* Mazda */ = {
 			isa = PBXGroup;
 			children = (
+				C603F9082B32C0D5005A8B0A /* User */,
+				C63DD7D92B2934480090858C /* Network */,
 				C65180AF2B289DC1001CF33B /* MazdaApp.swift */,
 				C65180B12B289DC1001CF33B /* ContentView.swift */,
 				C65180B32B289DC2001CF33B /* Assets.xcassets */,
@@ -145,6 +187,9 @@
 			dependencies = (
 			);
 			name = Mazda;
+			packageProductDependencies = (
+				C63DD7DC2B2934A40090858C /* Alamofire */,
+			);
 			productName = Mazda;
 			productReference = C65180AC2B289DC1001CF33B /* Mazda.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +262,9 @@
 				Base,
 			);
 			mainGroup = C65180A32B289DC1001CF33B;
+			packageReferences = (
+				C69C86EB2B28ABEC000D57E5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C65180AD2B289DC1001CF33B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C65180B22B289DC1001CF33B /* ContentView.swift in Sources */,
+				C603F8FB2B319437005A8B0A /* ServiceConfiguration.swift in Sources */,
+				C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */,
+				C603F8F92B3186AA005A8B0A /* ServiceEnvironment.swift in Sources */,
+				C603F8F32B317BA8005A8B0A /* Service.swift in Sources */,
+				C603F9012B327D09005A8B0A /* ServiceRequestBuilder.swift in Sources */,
+				C603F9072B32BF0E005A8B0A /* ServiceError.swift in Sources */,
+				C603F8EF2B301CE9005A8B0A /* ResultModel.swift in Sources */,
+				C603F8FD2B31952E005A8B0A /* ServiceAPI.swift in Sources */,
 				C65180B02B289DC1001CF33B /* MazdaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,10 +490,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.logorhythms.Mazda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,10 +528,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.logorhythms.Mazda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -617,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C69C86EB2B28ABEC000D57E5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C63DD7DC2B2934A40090858C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C69C86EB2B28ABEC000D57E5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C65180A42B289DC1001CF33B /* Project object */;
 }

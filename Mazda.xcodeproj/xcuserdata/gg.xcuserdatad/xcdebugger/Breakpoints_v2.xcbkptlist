@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "05AA2D7D-EF14-4AFA-9786-F0FF56855638"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15B901DC-9ABA-4558-AD2D-492C378F3AA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazda/CarStatusViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchCarStatus()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15B901DC-9ABA-4558-AD2D-492C378F3AA8 - 372ba4de84495b1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Alamofire.AFError&gt;) -&gt; () in Mazda.CarStatusViewModel.fetchCarStatus() -&gt; ()"
+                  moduleName = "Mazda"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gg/Developer/Xcode/Mazda/Mazda/CarStatusViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "15B901DC-9ABA-4558-AD2D-492C378F3AA8 - 372ba4de84495b1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Alamofire.AFError&gt;) -&gt; () in Mazda.CarStatusViewModel.fetchCarStatus() -&gt; ()"
+                  moduleName = "Mazda"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gg/Developer/Xcode/Mazda/Mazda/CarStatusViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9763F5AB-3A45-4CA7-9F65-2936A42D6050"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mazda/CarStatusViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "fetchCarStatus()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

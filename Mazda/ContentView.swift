@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var userViewModel = UserViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("\(userViewModel.result?.data?.token ?? "1")")
+            
+            Button(action: {
+                userViewModel.getUserInfo()
+            }, label: {
+                Text("Button")
+            })
         }
         .padding()
     }
