@@ -9,24 +9,24 @@ import Combine
 import Foundation
 
 class UserViewModel: ObservableObject {
-    @Published var result: Result<ResultData>?
+    @Published var userInfo: Result<UserInfo>?
     
     private var cancellableSet: Set<AnyCancellable> = []
     var service: Service
     
     
-    init(result: Result<ResultData>? = nil, service: Service = Service.shared) {
-        self.result = result
+    init(result: Result<UserInfo>? = nil, service: Service = Service.shared) {
+        self.userInfo = result
         self.service = service
     }
     
     func getUserInfo() {
-        service.fetchData(ServiceAPI.userInfo, model: Result<ResultData>.self)
+        service.fetchData(ServiceAPI.userInfo, model: Result<UserInfo>.self)
             .sink { (dataResponse) in
                 if dataResponse.error != nil {
-                    print("error")
+                    print(dataResponse.error ?? "出错")
                 } else {
-                    self.result = dataResponse.value
+                    self.userInfo = dataResponse.value
                 }
             }.store(in: &cancellableSet)
     }

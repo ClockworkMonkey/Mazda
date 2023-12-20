@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("\(userViewModel.result?.data?.token ?? "1")")
+            Text(userViewModel.userInfo?.data?.mobile ?? "xxx")
             
             Button(action: {
                 userViewModel.getUserInfo()
