@@ -64,7 +64,7 @@ struct CtrlConfigStr: Codable {
 
 // MARK: - CtrlConfigInt
 struct CtrlConfigInt: Codable {
-    let ctrl, state: String
+    let ctrl, state: Int
 }
 
 // MARK: - DevInfo
