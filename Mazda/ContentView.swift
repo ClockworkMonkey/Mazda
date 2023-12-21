@@ -11,11 +11,20 @@ struct ContentView: View {
     @ObservedObject var userViewModel = UserViewModel()
     @ObservedObject var carStatusViewModel = CarViewModel()
     
+    @State var isOn: Bool = false
+    
     var body: some View {
         VStack {
             Spacer()
             
             if let carStatus = carStatusViewModel.carStatus?.data {
+                
+                PercentageRectangleView(percent: Double(carStatus.oil)! / 53)
+                    .frame(width: 350, height: 100)
+                
+                InformationToggleView(title: "Doors", description: "Closed", isOn: carStatus.lock.lf == 1)
+                    .frame(width: 300, height: 150)
+                
                 VStack {
                     Text("在线状态：\(carStatus.online)")
                     Text("车速：\(carStatus.speed)")
@@ -50,6 +59,12 @@ struct ContentView: View {
             }
             
             Spacer()
+            
+            Button(action: {
+                isOn.toggle()
+            }, label: {
+                Text("Button")
+            })
             
             Text(carStatusViewModel.status)
         }

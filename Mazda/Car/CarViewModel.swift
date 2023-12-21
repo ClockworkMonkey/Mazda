@@ -18,6 +18,7 @@ class CarViewModel: ObservableObject {
     
     init() {
         timer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true, block: { timer in
+            print("获取数据...")
             self.getCarStatus()
         })
     }
