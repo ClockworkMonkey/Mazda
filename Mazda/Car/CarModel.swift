@@ -8,6 +8,16 @@
 import Foundation
 
 // MARK: - DataClass
+struct CarCtrl: Codable {
+    let unitTest: String
+
+
+    enum CodingKeys: String, CodingKey {
+        case unitTest = "unit_test"
+    }
+}
+
+// MARK: - DataClass
 struct CarStatus: Codable {
     let oil, gear, engineSpeed, bat: String
     let tempIn, tempOut: String

@@ -21,6 +21,7 @@
 		C603F9142B33D812005A8B0A /* PercentageRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9132B33D812005A8B0A /* PercentageRectangleView.swift */; };
 		C603F9162B33D8D4005A8B0A /* InformationToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */; };
 		C603F9182B33E393005A8B0A /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9172B33E393005A8B0A /* GearView.swift */; };
+		C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */; };
 		C63DD7DD2B2934A40090858C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C63DD7DC2B2934A40090858C /* Alamofire */; };
 		C65180B02B289DC1001CF33B /* MazdaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180AF2B289DC1001CF33B /* MazdaApp.swift */; };
 		C65180B22B289DC1001CF33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180B12B289DC1001CF33B /* ContentView.swift */; };
@@ -63,6 +64,7 @@
 		C603F9132B33D812005A8B0A /* PercentageRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageRectangleView.swift; sourceTree = "<group>"; };
 		C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToggleView.swift; sourceTree = "<group>"; };
 		C603F9172B33E393005A8B0A /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
+		C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionButtonView.swift; sourceTree = "<group>"; };
 		C65180AC2B289DC1001CF33B /* Mazda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65180AF2B289DC1001CF33B /* MazdaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaApp.swift; sourceTree = "<group>"; };
 		C65180B12B289DC1001CF33B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				C65180B32B289DC2001CF33B /* Assets.xcassets */,
 				C65180B52B289DC2001CF33B /* Mazda.entitlements */,
 				C65180B62B289DC2001CF33B /* Preview Content */,
+				C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */,
 			);
 			path = Mazda;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			files = (
 				C603F9142B33D812005A8B0A /* PercentageRectangleView.swift in Sources */,
 				C65180B22B289DC1001CF33B /* ContentView.swift in Sources */,
+				C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */,
 				C603F8FB2B319437005A8B0A /* ServiceConfiguration.swift in Sources */,
 				C603F9182B33E393005A8B0A /* GearView.swift in Sources */,
 				C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */,

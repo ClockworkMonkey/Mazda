@@ -11,6 +11,7 @@ import Foundation
 enum ServiceAPI {
     case userInfo
     case carStatus
+    case carCtrl(ctrl: String)
 }
 
 extension ServiceAPI: ServiceRequestBuilder {
@@ -20,6 +21,8 @@ extension ServiceAPI: ServiceRequestBuilder {
             return "/user/appSyncUserInfo"
         case .carStatus:
             return "/car/status"
+        case .carCtrl:
+            return "/car/ctrl"
         }
     }
     
@@ -31,6 +34,12 @@ extension ServiceAPI: ServiceRequestBuilder {
             return [
                 "carid": "1327407"
             ]
+        case .carCtrl(let ctrl):
+            return [
+                "carid": "1327407",
+                "boot_time": 15,
+                "ctrl": ctrl
+            ]
         }
     }
     
@@ -40,6 +49,8 @@ extension ServiceAPI: ServiceRequestBuilder {
             return HTTPMethod.post
         case .carStatus:
             return HTTPMethod.get
+        case .carCtrl:
+            return HTTPMethod.post
         }
     }
 }

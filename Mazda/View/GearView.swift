@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct GearView: View {
-    let gears: [String] = ["P", "R", "N", "D"]
-    
     @State var gear: String = "P"
+    
+    private let gears: [String] = ["P", "R", "N", "D"]
     
     var body: some View {
         HStack {
@@ -27,5 +27,5 @@ struct GearView: View {
 }
 
 #Preview {
-    GearView()
+    GearView(gear: "R")
 }

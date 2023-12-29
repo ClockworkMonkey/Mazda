@@ -20,9 +20,9 @@ struct InformationToggleView: View {
         HStack {
             VStack(alignment: .leading) {
                 Text(title)
-                    .font(.largeTitle)
+                    .font(.title)
                 
-                Text(description)
+                Text(isOn ? "打开" : "关闭")
             }
             
             Toggle("", isOn: $isOn)

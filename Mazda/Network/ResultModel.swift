@@ -11,6 +11,8 @@ import Foundation
 struct Result<T: Codable>: Codable {
     let status: Int
     let data: T?
+    let message: String?
+    let unit_test: String?
 }
 
 struct ResultData: Codable {
