@@ -13,6 +13,7 @@ enum FunctionButtonType {
     case engine(isOn: Bool)
     case frontTrunk(isOn: Bool)
     case internet(isOn: Bool)
+    case lock(isOn: Bool)
     case rearTrunk(isOn: Bool)
     
     var image: String {
@@ -20,13 +21,15 @@ enum FunctionButtonType {
         case .airConditioning(let isOn):
             return isOn ? "car.side.air.fresh" : "car.side"
         case .door(let isOn, let doorType):
-            return !isOn ? "car.side.lock.open" : getDoorName(doorType: doorType)
+            return !isOn ? "car.side" : getDoorName(doorType: doorType)
         case .engine(let isOn):
             return isOn ? "engine.combustion" : "engine.combustion"
         case .frontTrunk(let isOn):
             return isOn ? "car.side.front.open" : "car.side.front.open"
         case .internet(let isOn):
             return isOn ? "car.rear.waves.up" : "car.rear.waves.up"
+        case .lock(let isOn):
+            return isOn ? "car.side.lock.open" : "car.side.lock"
         case .rearTrunk(let isOn):
             return isOn ? "car.side.rear.open" : "car.side.rear.open"
         }
@@ -38,7 +41,10 @@ enum FunctionButtonType {
     
     private var isOn: Bool {
         switch self {
-        case .airConditioning(let isOn), .door(let isOn, _), .engine(let isOn), .frontTrunk(let isOn), .internet(let isOn), .rearTrunk(let isOn):
+        case .airConditioning(let isOn), .door(let isOn, _),
+                .engine(let isOn), .frontTrunk(let isOn),
+                .internet(let isOn), .lock(let isOn),
+                .rearTrunk(let isOn):
             return isOn
         }
     }
@@ -85,5 +91,5 @@ struct FunctionButtonView: View {
 }
 
 #Preview {
-    FunctionButtonView(type: .door(isOn: true, doorType: "ACD"))
+    FunctionButtonView(type: .lock(isOn: true))
 }

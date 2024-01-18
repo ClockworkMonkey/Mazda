@@ -23,12 +23,6 @@ struct ContentView: View {
                 
                 GearView(gear: carStatus.gear)
                 
-                VStack {
-                    Text("车速：\(carStatus.speed)")
-                    Text("总计里程：\(carStatus.mileage) Km")
-                    Text("电池电压：\(carStatus.bat) V")
-                }
-                
                 HStack {
                     Text("车外温度：\(carStatus.tempOut) °C")
                     
@@ -36,26 +30,39 @@ struct ContentView: View {
                 }
                 
                 VStack {
-                    HStack {
-                        Text("左前门锁：\(carStatus.lock.lf == 0 ? "关" : "开")")
-                        
-                        Text("右前门锁：\(carStatus.lock.rf == 0 ? "关" : "开")")
-                    }
+                    Text("车速：\(carStatus.speed)")
+                    Text("总计里程：\(carStatus.mileage) Km")
                     
-                    HStack {
-                        Text("左后门锁：\(carStatus.lock.lr == 0 ? "关" : "开")")
+                    ZStack {
+                        Image(systemName: "batteryblock")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 40)
+                            .foregroundColor(.white)
+                            .padding(20)
+                            .background(.red)
+                            .cornerRadius(10)
                         
-                        Text("右后门锁：\(carStatus.lock.rr == 0 ? "关" : "开")")
+                        Text("\(carStatus.bat) V")
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 
                 HStack {
+                    // TBOX 状态
+                    FunctionButtonView(type: .internet(isOn: carStatus.online == "1"))
+                    
+                    // 门锁状态
                     Button(action: {
-                        
+                        let isLocked = getCarIsLocked(lock: carStatus.lock)
+                        carStatusViewModel.carCtrl(ctrl: isLocked ? "unlock" : "lock")
                     }, label: {
-                        FunctionButtonView(type: .internet(isOn: carStatus.online == "1"))
+                        FunctionButtonView(type: .lock(isOn: !getCarIsLocked(lock: carStatus.lock)))
                     })
                     
+                    // 发动机状态
                     Button(action: {
                         
                     }, label: {
@@ -64,18 +71,21 @@ struct ContentView: View {
                 }
                 
                 HStack {
+                    // 车门状态
                     Button(action: {
                         
                     }, label: {
                         FunctionButtonView(type: .door(isOn: getDoorType(door: carStatus.door).count > 0, doorType: getDoorType(door: carStatus.door)))
                     })
                     
+                    // 前备箱
                     Button(action: {
                         
                     }, label: {
                         FunctionButtonView(type: .frontTrunk(isOn: carStatus.door.hood == 1))
                     })
                     
+                    // 后备箱
                     Button(action: {
                         
                     }, label: {
@@ -117,7 +127,11 @@ extension ContentView {
         if door.rr == 1 {
             doorType += "D"
         }
-        return ""
+        return doorType
+    }
+    
+    func getCarIsLocked(lock: Lock) -> Bool {
+        return lock.lf == 0 && lock.lr == 0 && lock.rf == 0 && lock.rr == 0
     }
 }
 

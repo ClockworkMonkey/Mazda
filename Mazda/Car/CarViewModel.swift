@@ -9,7 +9,11 @@ import Combine
 import Foundation
 
 class CarViewModel: ObservableObject {
-    @Published var carStatus: Result<CarStatus>? = nil
+    @Published var carStatus: Result<CarStatus>? = nil {
+        willSet {
+            objectWillChange.send()
+        }
+    }
     @Published var carCtrl: Result<CarCtrl>? = nil
     @Published var status: String = "等待获取数据"
     
@@ -18,8 +22,7 @@ class CarViewModel: ObservableObject {
     private var timer: Timer?
     
     init() {
-        timer = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: true, block: { timer in
-            print("获取数据中...")
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { timer in
             self.getCarStatus()
         })
     }
@@ -41,7 +44,6 @@ extension CarViewModel {
                 } else {
                     self.status = "获取数据成功"
                     self.carStatus = dataResponse.value
-                    self.objectWillChange.send()
                 }
             }.store(in: &cancellableSet)
     }
@@ -57,7 +59,6 @@ extension CarViewModel {
                 } else {
                     self.status = "获取数据成功"
                     self.carCtrl = dataResponse.value
-                    self.objectWillChange.send()
                 }
             }.store(in: &cancellableSet)
     }
