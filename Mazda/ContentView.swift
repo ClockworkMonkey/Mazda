@@ -12,6 +12,7 @@ struct ContentView: View {
     @ObservedObject var carStatusViewModel = CarViewModel()
     
     private let fuelTankCapacity: Double = 53.0
+    private let bluetoothManager = BluetoothManager.shared
     
     var body: some View {
         VStack {
@@ -99,6 +100,12 @@ struct ContentView: View {
             }
             
             Spacer()
+            
+            Button {
+                bluetoothManager.startScan()
+            } label: {
+                Text("蓝牙")
+            }
 
             Text(carStatusViewModel.status)
         }

@@ -30,6 +30,8 @@
 		C65180C22B289DC2001CF33B /* MazdaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180C12B289DC2001CF33B /* MazdaTests.swift */; };
 		C65180CC2B289DC2001CF33B /* MazdaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180CB2B289DC2001CF33B /* MazdaUITests.swift */; };
 		C65180CE2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180CD2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift */; };
+		C688A9D12B58C75700F9E550 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688A9D02B58C75700F9E550 /* BluetoothManager.swift */; };
+		C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		C65180C72B289DC2001CF33B /* MazdaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazdaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65180CB2B289DC2001CF33B /* MazdaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaUITests.swift; sourceTree = "<group>"; };
 		C65180CD2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C688A9D02B58C75700F9E550 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 		C65180AE2B289DC1001CF33B /* Mazda */ = {
 			isa = PBXGroup;
 			children = (
+				C688A9CD2B58C6E700F9E550 /* Bluetooth */,
 				C603F9122B33D7FF005A8B0A /* View */,
 				C603F90B2B32DE16005A8B0A /* Car */,
 				C603F9082B32C0D5005A8B0A /* User */,
@@ -206,6 +211,15 @@
 				C65180CD2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift */,
 			);
 			path = MazdaUITests;
+			sourceTree = "<group>";
+		};
+		C688A9CD2B58C6E700F9E550 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */,
+				C688A9D02B58C75700F9E550 /* BluetoothManager.swift */,
+			);
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +289,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					C65180AB2B289DC1001CF33B = {
 						CreatedOnToolsVersion = 15.1;
@@ -348,6 +362,7 @@
 				C65180B22B289DC1001CF33B /* ContentView.swift in Sources */,
 				C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */,
 				C603F8FB2B319437005A8B0A /* ServiceConfiguration.swift in Sources */,
+				C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */,
 				C603F9182B33E393005A8B0A /* GearView.swift in Sources */,
 				C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */,
 				C603F8F92B3186AA005A8B0A /* ServiceEnvironment.swift in Sources */,
@@ -360,6 +375,7 @@
 				C603F90D2B32DE8E005A8B0A /* CarModel.swift in Sources */,
 				C603F8FD2B31952E005A8B0A /* ServiceAPI.swift in Sources */,
 				C65180B02B289DC1001CF33B /* MazdaApp.swift in Sources */,
+				C688A9D12B58C75700F9E550 /* BluetoothManager.swift in Sources */,
 				C603F90A2B32C243005A8B0A /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +447,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -492,6 +509,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -519,11 +537,14 @@
 				CODE_SIGN_ENTITLEMENTS = Mazda/Mazda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mazda/Preview Content\"";
 				DEVELOPMENT_TEAM = Q569HPLMA9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "蓝牙2";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "蓝牙";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -557,11 +578,14 @@
 				CODE_SIGN_ENTITLEMENTS = Mazda/Mazda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mazda/Preview Content\"";
 				DEVELOPMENT_TEAM = Q569HPLMA9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "蓝牙2";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "蓝牙";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -594,6 +618,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Q569HPLMA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -617,6 +642,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Q569HPLMA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -639,6 +665,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Q569HPLMA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -661,6 +688,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = Q569HPLMA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
