@@ -15,6 +15,7 @@ enum FunctionButtonType {
     case internet(isOn: Bool)
     case lock(isOn: Bool)
     case rearTrunk(isOn: Bool)
+    case window(isOn: Bool)
     
     var image: String {
         switch self {
@@ -32,11 +33,34 @@ enum FunctionButtonType {
             return isOn ? "car.side.lock.open" : "car.side.lock"
         case .rearTrunk(let isOn):
             return isOn ? "car.side.rear.open" : "car.side.rear.open"
+        case .window(let isOn):
+            return isOn ? "arrowtriangle.up.arrowtriangle.down.window.right" : "arrowtriangle.up.arrowtriangle.down.window.right"
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .airConditioning:
+            return "空调"
+        case .door:
+            return "车门"
+        case .engine:
+            return "引擎"
+        case .frontTrunk:
+            return "前备箱"
+        case .internet:
+            return "联网"
+        case .lock:
+            return "门锁"
+        case .rearTrunk:
+            return "后备箱"
+        case .window:
+            return "窗户"
         }
     }
     
     var color: Color {
-        return isOn ? .green : .red
+        return isOn ? .blue : .gray
     }
     
     private var isOn: Bool {
@@ -44,7 +68,7 @@ enum FunctionButtonType {
         case .airConditioning(let isOn), .door(let isOn, _),
                 .engine(let isOn), .frontTrunk(let isOn),
                 .internet(let isOn), .lock(let isOn),
-                .rearTrunk(let isOn):
+                .rearTrunk(let isOn), .window(let isOn):
             return isOn
         }
     }
@@ -79,17 +103,19 @@ struct FunctionButtonView: View {
     var type: FunctionButtonType
     
     var body: some View {
-        Image(systemName: type.image)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 60, height: 40)
-            .foregroundColor(.white)
-            .padding(20)
-            .background(type.color)
-            .cornerRadius(10)
+        GeometryReader { geometry in
+            Image(systemName: type.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(10)
+                .frame(width: geometry.size.width, height: 70)
+                .foregroundColor(.white)
+                .background(type.color)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
     }
 }
 
 #Preview {
-    FunctionButtonView(type: .lock(isOn: true))
+    FunctionButtonView(type: .window(isOn: true))
 }

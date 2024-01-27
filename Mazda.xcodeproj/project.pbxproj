@@ -10,7 +10,6 @@
 		C603F8EF2B301CE9005A8B0A /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8EE2B301CE9005A8B0A /* ResultModel.swift */; };
 		C603F8F32B317BA8005A8B0A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8F22B317BA8005A8B0A /* Service.swift */; };
 		C603F8F92B3186AA005A8B0A /* ServiceEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */; };
-		C603F8FB2B319437005A8B0A /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8FA2B319437005A8B0A /* ServiceConfiguration.swift */; };
 		C603F8FD2B31952E005A8B0A /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */; };
 		C603F9012B327D09005A8B0A /* ServiceRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9002B327D09005A8B0A /* ServiceRequestBuilder.swift */; };
 		C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9042B32955C005A8B0A /* UserViewModel.swift */; };
@@ -30,6 +29,16 @@
 		C65180C22B289DC2001CF33B /* MazdaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180C12B289DC2001CF33B /* MazdaTests.swift */; };
 		C65180CC2B289DC2001CF33B /* MazdaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180CB2B289DC2001CF33B /* MazdaUITests.swift */; };
 		C65180CE2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180CD2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift */; };
+		C653C5272B5AB77D00938193 /* FuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5262B5AB77D00938193 /* FuelView.swift */; };
+		C653C5292B5B4A6600938193 /* FunctionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5282B5B4A6600938193 /* FunctionView.swift */; };
+		C653C52B2B5B515900938193 /* SpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C52A2B5B515900938193 /* SpeedView.swift */; };
+		C653C52F2B5B6EE200938193 /* CarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C52E2B5B6EE200938193 /* CarContentView.swift */; };
+		C653C5312B5B6F6400938193 /* LightContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5302B5B6F6400938193 /* LightContentView.swift */; };
+		C653C5332B5B743000938193 /* BluetoothEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5322B5B743000938193 /* BluetoothEnvironment.swift */; };
+		C653C5352B5B848A00938193 /* BluetoothLightAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5342B5B848A00938193 /* BluetoothLightAPI.swift */; };
+		C653C5372B5B8AA000938193 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5362B5B8AA000938193 /* ColorPickerView.swift */; };
+		C653C53A2B5C101000938193 /* LightSingleColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5392B5C101000938193 /* LightSingleColorView.swift */; };
+		C6782C4B2B6529B400AA6C81 /* CarHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */; };
 		C688A9D12B58C75700F9E550 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688A9D02B58C75700F9E550 /* BluetoothManager.swift */; };
 		C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +64,6 @@
 		C603F8EE2B301CE9005A8B0A /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		C603F8F22B317BA8005A8B0A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEnvironment.swift; sourceTree = "<group>"; };
-		C603F8FA2B319437005A8B0A /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
 		C603F9002B327D09005A8B0A /* ServiceRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestBuilder.swift; sourceTree = "<group>"; };
 		C603F9042B32955C005A8B0A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -78,6 +86,16 @@
 		C65180C72B289DC2001CF33B /* MazdaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MazdaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65180CB2B289DC2001CF33B /* MazdaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaUITests.swift; sourceTree = "<group>"; };
 		C65180CD2B289DC2001CF33B /* MazdaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C653C5262B5AB77D00938193 /* FuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelView.swift; sourceTree = "<group>"; };
+		C653C5282B5B4A6600938193 /* FunctionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionView.swift; sourceTree = "<group>"; };
+		C653C52A2B5B515900938193 /* SpeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedView.swift; sourceTree = "<group>"; };
+		C653C52E2B5B6EE200938193 /* CarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarContentView.swift; sourceTree = "<group>"; };
+		C653C5302B5B6F6400938193 /* LightContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightContentView.swift; sourceTree = "<group>"; };
+		C653C5322B5B743000938193 /* BluetoothEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothEnvironment.swift; sourceTree = "<group>"; };
+		C653C5342B5B848A00938193 /* BluetoothLightAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothLightAPI.swift; sourceTree = "<group>"; };
+		C653C5362B5B8AA000938193 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		C653C5392B5C101000938193 /* LightSingleColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSingleColorView.swift; sourceTree = "<group>"; };
+		C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHomeView.swift; sourceTree = "<group>"; };
 		C688A9D02B58C75700F9E550 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,8 +138,12 @@
 		C603F90B2B32DE16005A8B0A /* Car */ = {
 			isa = PBXGroup;
 			children = (
+				C603F9122B33D7FF005A8B0A /* View */,
 				C603F90C2B32DE8E005A8B0A /* CarModel.swift */,
 				C603F90E2B32DF33005A8B0A /* CarViewModel.swift */,
+				C653C5262B5AB77D00938193 /* FuelView.swift */,
+				C653C52E2B5B6EE200938193 /* CarContentView.swift */,
+				C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */,
 			);
 			path = Car;
 			sourceTree = "<group>";
@@ -129,6 +151,9 @@
 		C603F9122B33D7FF005A8B0A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C653C52A2B5B515900938193 /* SpeedView.swift */,
+				C653C5282B5B4A6600938193 /* FunctionView.swift */,
+				C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */,
 				C603F9132B33D812005A8B0A /* PercentageRectangleView.swift */,
 				C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */,
 				C603F9172B33E393005A8B0A /* GearView.swift */,
@@ -142,7 +167,6 @@
 				C603F8EE2B301CE9005A8B0A /* ResultModel.swift */,
 				C603F8F22B317BA8005A8B0A /* Service.swift */,
 				C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */,
-				C603F8FA2B319437005A8B0A /* ServiceConfiguration.swift */,
 				C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */,
 				C603F9002B327D09005A8B0A /* ServiceRequestBuilder.swift */,
 				C603F9062B32BF0E005A8B0A /* ServiceError.swift */,
@@ -174,16 +198,15 @@
 			isa = PBXGroup;
 			children = (
 				C688A9CD2B58C6E700F9E550 /* Bluetooth */,
-				C603F9122B33D7FF005A8B0A /* View */,
+				C63DD7D92B2934480090858C /* Network */,
+				C653C5382B5C0F6800938193 /* Light */,
 				C603F90B2B32DE16005A8B0A /* Car */,
 				C603F9082B32C0D5005A8B0A /* User */,
-				C63DD7D92B2934480090858C /* Network */,
 				C65180AF2B289DC1001CF33B /* MazdaApp.swift */,
 				C65180B12B289DC1001CF33B /* ContentView.swift */,
 				C65180B32B289DC2001CF33B /* Assets.xcassets */,
 				C65180B52B289DC2001CF33B /* Mazda.entitlements */,
 				C65180B62B289DC2001CF33B /* Preview Content */,
-				C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */,
 			);
 			path = Mazda;
 			sourceTree = "<group>";
@@ -213,11 +236,23 @@
 			path = MazdaUITests;
 			sourceTree = "<group>";
 		};
+		C653C5382B5C0F6800938193 /* Light */ = {
+			isa = PBXGroup;
+			children = (
+				C653C5302B5B6F6400938193 /* LightContentView.swift */,
+				C653C5362B5B8AA000938193 /* ColorPickerView.swift */,
+				C653C5392B5C101000938193 /* LightSingleColorView.swift */,
+			);
+			path = Light;
+			sourceTree = "<group>";
+		};
 		C688A9CD2B58C6E700F9E550 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				C653C5322B5B743000938193 /* BluetoothEnvironment.swift */,
 				C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */,
 				C688A9D02B58C75700F9E550 /* BluetoothManager.swift */,
+				C653C5342B5B848A00938193 /* BluetoothLightAPI.swift */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -361,22 +396,31 @@
 				C603F9142B33D812005A8B0A /* PercentageRectangleView.swift in Sources */,
 				C65180B22B289DC1001CF33B /* ContentView.swift in Sources */,
 				C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */,
-				C603F8FB2B319437005A8B0A /* ServiceConfiguration.swift in Sources */,
+				C653C5272B5AB77D00938193 /* FuelView.swift in Sources */,
 				C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */,
 				C603F9182B33E393005A8B0A /* GearView.swift in Sources */,
 				C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */,
+				C653C52B2B5B515900938193 /* SpeedView.swift in Sources */,
+				C653C5332B5B743000938193 /* BluetoothEnvironment.swift in Sources */,
 				C603F8F92B3186AA005A8B0A /* ServiceEnvironment.swift in Sources */,
+				C653C52F2B5B6EE200938193 /* CarContentView.swift in Sources */,
 				C603F8F32B317BA8005A8B0A /* Service.swift in Sources */,
 				C603F9012B327D09005A8B0A /* ServiceRequestBuilder.swift in Sources */,
+				C653C5372B5B8AA000938193 /* ColorPickerView.swift in Sources */,
+				C653C5352B5B848A00938193 /* BluetoothLightAPI.swift in Sources */,
 				C603F9162B33D8D4005A8B0A /* InformationToggleView.swift in Sources */,
+				C653C53A2B5C101000938193 /* LightSingleColorView.swift in Sources */,
 				C603F90F2B32DF33005A8B0A /* CarViewModel.swift in Sources */,
+				C6782C4B2B6529B400AA6C81 /* CarHomeView.swift in Sources */,
 				C603F9072B32BF0E005A8B0A /* ServiceError.swift in Sources */,
 				C603F8EF2B301CE9005A8B0A /* ResultModel.swift in Sources */,
 				C603F90D2B32DE8E005A8B0A /* CarModel.swift in Sources */,
 				C603F8FD2B31952E005A8B0A /* ServiceAPI.swift in Sources */,
 				C65180B02B289DC1001CF33B /* MazdaApp.swift in Sources */,
 				C688A9D12B58C75700F9E550 /* BluetoothManager.swift in Sources */,
+				C653C5292B5B4A6600938193 /* FunctionView.swift in Sources */,
 				C603F90A2B32C243005A8B0A /* UserModel.swift in Sources */,
+				C653C5312B5B6F6400938193 /* LightContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

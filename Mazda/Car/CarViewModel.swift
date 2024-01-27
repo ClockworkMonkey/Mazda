@@ -22,9 +22,11 @@ class CarViewModel: ObservableObject {
     private var timer: Timer?
     
     init() {
-        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { timer in
-            self.getCarStatus()
-        })
+        self.getCarStatus()
+        
+//        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { timer in
+//            self.getCarStatus()
+//        })
     }
     
     deinit {
@@ -42,7 +44,11 @@ extension CarViewModel {
                     self.status = "获取数据出错"
                     print(dataResponse.error ?? "出错")
                 } else {
+                    print("获取数据成功")
                     self.status = "获取数据成功"
+                    if dataResponse.value?.status != 200 {
+                        self.status = dataResponse.value?.message ?? "失败"
+                    }
                     self.carStatus = dataResponse.value
                 }
             }.store(in: &cancellableSet)
@@ -57,6 +63,7 @@ extension CarViewModel {
                     self.status = "获取数据出错"
                     print(dataResponse.error ?? "出错")
                 } else {
+                    print("获取数据成功")
                     self.status = "获取数据成功"
                     self.carCtrl = dataResponse.value
                 }

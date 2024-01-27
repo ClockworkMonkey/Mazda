@@ -38,7 +38,7 @@ extension ServiceRequestBuilder {
     
     var headers: HTTPHeaders {
         var headers = HTTPHeaders()
-        headers.add(name: "Token", value: "5a474aefb59f3b3d72c28ea487723bf1cbbd0c7207")
+        headers.add(name: "Token", value: "ad30920d7b0c8267bad3c35d7dbb2882a0a5fd5642")
         return headers
     }
     
