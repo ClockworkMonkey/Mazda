@@ -11,10 +11,20 @@ struct ContentView: View {
     let bluetoothManager = BluetoothManager.shared
     
     var body: some View {
-        CarHomeView()
-        
-//        LightContentView()
-//            .environmentObject(bluetoothManager)
+        TabView {
+            CarHomeView()
+                .tabItem {
+                    Image(systemName: "car")
+                    Text("车辆")
+                }
+            
+            LightContentView()
+                .environmentObject(bluetoothManager)
+                .tabItem {
+                    Image(systemName: "lightbulb.led")
+                    Text("灯光")
+                }
+        }
     }
 }
 

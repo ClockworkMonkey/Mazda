@@ -12,6 +12,9 @@ struct CarContentView: View {
     
     var body: some View {
         VStack() {
+            // 车辆状态
+            Text(carViewModel.status)
+            
             if let carStatus = carViewModel.carStatus?.data {
                 HStack {
                     Image(systemName: "wifi")
@@ -40,7 +43,7 @@ struct CarContentView: View {
                     // 档位
                     GearView(gear: carStatus.gear)
                 }
-                .frame(maxHeight: 200)
+                .frame(maxHeight: 150)
                 
                 // 油量
                 FuelView()
@@ -50,9 +53,6 @@ struct CarContentView: View {
             }
         }
         .padding(.horizontal)
-        
-        // 车辆状态
-        Text(carViewModel.status)
     }
     
     func convertTimestampToDate(timestamp: TimeInterval) -> String {
