@@ -142,9 +142,9 @@
 		C603F90B2B32DE16005A8B0A /* Car */ = {
 			isa = PBXGroup;
 			children = (
+				C637681D2B677B9A00B9B911 /* ViewModel */,
+				C637681C2B677B8300B9B911 /* Model */,
 				C603F9122B33D7FF005A8B0A /* View */,
-				C603F90C2B32DE8E005A8B0A /* CarModel.swift */,
-				C603F90E2B32DF33005A8B0A /* CarViewModel.swift */,
 				C653C52E2B5B6EE200938193 /* CarContentView.swift */,
 				C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */,
 			);
@@ -174,10 +174,26 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		C63DD7D92B2934480090858C /* Network */ = {
+		C637681C2B677B8300B9B911 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C603F8EE2B301CE9005A8B0A /* ResultModel.swift */,
+				C603F90C2B32DE8E005A8B0A /* CarModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C637681D2B677B9A00B9B911 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C603F90E2B32DF33005A8B0A /* CarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C63DD7D92B2934480090858C /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				C603F8F22B317BA8005A8B0A /* Service.swift */,
 				C603F8F82B3186AA005A8B0A /* ServiceEnvironment.swift */,
 				C603F8FC2B31952E005A8B0A /* ServiceAPI.swift */,

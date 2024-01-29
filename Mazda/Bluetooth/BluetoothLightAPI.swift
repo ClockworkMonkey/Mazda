@@ -17,7 +17,6 @@ enum BluetoothLightAPI {
 }
 
 extension BluetoothLightAPI {
-    
     var data: Data {
         var bytes: [UInt8] = []
         switch self {
@@ -36,5 +35,4 @@ extension BluetoothLightAPI {
         }
         return Data(bytes)
     }
-    
 }

@@ -9,7 +9,6 @@ import CoreBluetooth
 import Foundation
 
 struct BluetoothPeripheral: Identifiable, Hashable {
-    
     let id: UUID
     
     let uuid: String
@@ -17,12 +16,10 @@ struct BluetoothPeripheral: Identifiable, Hashable {
     var rssi: Double = 0.00
     var isConnectable: Bool = false
     var peripheral: CBPeripheral?
-    
 }
 
 extension BluetoothPeripheral {
-    
-    static let example = [
+    static let exampleList = [
         BluetoothPeripheral(id: UUID(), uuid: UUID().uuidString, name: "Test_1", rssi: -90.1, isConnectable: false, peripheral: nil),
         BluetoothPeripheral(id: UUID(), uuid: UUID().uuidString, name: "Test_1", rssi: -90.1, isConnectable: false, peripheral: nil),
         BluetoothPeripheral(id: UUID(), uuid: UUID().uuidString, name: "Test_1", rssi: -90.1, isConnectable: false, peripheral: nil),
@@ -31,5 +28,4 @@ extension BluetoothPeripheral {
         BluetoothPeripheral(id: UUID(), uuid: UUID().uuidString, name: "Test_1", rssi: -90.1, isConnectable: false, peripheral: nil),
         BluetoothPeripheral(id: UUID(), uuid: UUID().uuidString, name: "Test_1", rssi: -90.1, isConnectable: false, peripheral: nil)
     ]
-    
 }

@@ -17,7 +17,6 @@ enum BluetoothState {
 }
 
 class BluetoothManager: NSObject, ObservableObject {
-    
     static let shared = BluetoothManager()
     
     lazy var centralManager: CBCentralManager = {
@@ -34,11 +33,9 @@ class BluetoothManager: NSObject, ObservableObject {
     var discoveredCharacteristic: CBCharacteristic?
     
     private override init() {}
-    
 }
 
 extension BluetoothManager {
-    
     func startScan() {
         guard centralManager.state == .poweredOn else { return }
         
@@ -117,7 +114,6 @@ extension BluetoothManager: CBCentralManagerDelegate {
 }
 
 extension BluetoothManager: CBPeripheralDelegate {
-    
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         print("发现服务")
         bluetoothState = .connected
@@ -140,9 +136,7 @@ extension BluetoothManager: CBPeripheralDelegate {
         characteristics.forEach { characteristic in
             if characteristic.uuid == BluetoothEnvironment.characteristicUUID {
                 discoveredCharacteristic = characteristic
-                // writeValue(lightAPI: .powerSwitch(isOn: true))
             }
         }
     }
-    
 }

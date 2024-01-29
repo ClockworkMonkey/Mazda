@@ -21,7 +21,6 @@ extension BluetoothEnvironment {
 }
 
 extension BluetoothEnvironment {
-    
     static var peripheralName: String {
         switch currentEnvironment {
         case .dev, .test:
@@ -57,5 +56,4 @@ extension BluetoothEnvironment {
             return CBUUID(string: "FFE1")
         }
     }
-    
 }
