@@ -11,10 +11,7 @@ struct CarContentView: View {
     @ObservedObject var carViewModel = CarViewModel()
     
     var body: some View {
-        VStack() {
-            // 车辆状态
-            Text(carViewModel.status)
-            
+        VStack(spacing: 15) {
             if let carStatus = carViewModel.carStatus?.data {
                 HStack {
                     Image(systemName: "wifi")
@@ -22,7 +19,9 @@ struct CarContentView: View {
                     
                     Spacer()
                     
-                    Text("更新时间：" + convertTimestampToDate(timestamp: TimeInterval(carStatus.time)))
+                    Text("更新时间：" + String.convertTimestamp(timestamp: TimeInterval(carStatus.time)))
+                        .font(.body)
+                        .foregroundColor(.white)
                 }
                 
                 Image(systemName: "car")
@@ -43,23 +42,23 @@ struct CarContentView: View {
                     // 档位
                     GearView(gear: carStatus.gear)
                 }
-                .frame(maxHeight: 150)
+                .frame(maxHeight: 120)
                 
-                // 油量
-                FuelView()
+                // 油量、里程
+                FuelView(milegage: carStatus.mileage, oil: carStatus.oil)
                 
                 // 功能按键
                 FunctionView(carStatus: carStatus)
+            } else {
+                // 网络请求状态
+                Text(carViewModel.status)
+                    .font(.title)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .foregroundColor(.white)
             }
         }
         .padding(.horizontal)
-    }
-    
-    func convertTimestampToDate(timestamp: TimeInterval) -> String {
-        let date = Date(timeIntervalSince1970: timestamp)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // 按照需要的格式设置日期格式
-        return dateFormatter.string(from: date)
+        .background(Color(hex: 0x1e2022))
     }
 }
 

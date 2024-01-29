@@ -66,6 +66,9 @@ extension CarViewModel {
                     print("获取数据成功")
                     self.status = "获取数据成功"
                     self.carCtrl = dataResponse.value
+                    
+                    // 更新车辆状态
+                    self.getCarStatus()
                 }
             }.store(in: &cancellableSet)
     }

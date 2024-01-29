@@ -19,56 +19,54 @@ struct FunctionView: View {
                 let width = (geometry.size.width - 30) / 4
                 
                 HStack(spacing: 10) {
-                    // TBOX 状态
-                    FunctionButtonView(type: .internet(isOn: carStatus.online == "1"))
-                        .frame(width: width)
-                    
-                    // 车门状态
-                    FunctionButtonView(type: .door(isOn: getDoorType(door: carStatus.door).count > 0, doorType: getDoorType(door: carStatus.door)))
-                        .frame(width: width)
-                    
-                    // TBOX 状态
-                    FunctionButtonView(type: .internet(isOn: carStatus.online == "1"))
-                        .frame(width: width)
-                    
-                    // 车门状态
-                    FunctionButtonView(type: .door(isOn: getDoorType(door: carStatus.door).count > 0, doorType: getDoorType(door: carStatus.door)))
-                        .frame(width: width)
+                    Group {
+                        // TBOX 状态
+                        FunctionButtonView(type: .internet(isOn: carStatus.online == "1"))
+                        
+                        // TBOX 状态
+                        FunctionButtonView(type: .internet(isOn: carStatus.online == "1"))
+                        
+                        // 车门状态
+                        FunctionButtonView(type: .door(isOn: getDoorType(door: carStatus.door).count > 0, doorType: getDoorType(door: carStatus.door)))
+                        
+                        // 车门状态
+                        FunctionButtonView(type: .door(isOn: getDoorType(door: carStatus.door).count > 0, doorType: getDoorType(door: carStatus.door)))
+                    }
+                    .frame(width: width)
                 }
                 
                 HStack(spacing: 10) {
-                    // 车窗
-                    Button(action: {
+                    Group {
+                        // 车窗
+                        Button(action: {
 
-                    }, label: {
-                        FunctionButtonView(type: .window(isOn: !getWindowIsLocked(window: carStatus.window)))
-                            .frame(width: width)
-                    })
-                    
-                    // 后备箱
-                    Button(action: {
-
-                    }, label: {
-                        FunctionButtonView(type: .rearTrunk(isOn: carStatus.door.trunk == 1))
-                            .frame(width: width)
-                    })
-                    
-                    // 门锁状态
-                    Button(action: {
-                        let isLocked = getCarIsLocked(lock: carStatus.lock)
-                        carViewModel.carCtrl(ctrl: isLocked ? "unlock" : "lock")
-                    }, label: {
-                        FunctionButtonView(type: .lock(isOn: !getCarIsLocked(lock: carStatus.lock)))
-                            .frame(width: width)
-                    })
-                    
-                    // 发动机状态
-                    Button(action: {
+                        }, label: {
+                            FunctionButtonView(type: .window(isOn: !getWindowIsLocked(window: carStatus.window)))
+                        })
                         
-                    }, label: {
-                        FunctionButtonView(type: .engine(isOn: carStatus.engine == 1))
-                            .frame(width: width)
-                    })
+                        // 后备箱
+                        Button(action: {
+
+                        }, label: {
+                            FunctionButtonView(type: .rearTrunk(isOn: carStatus.door.trunk == 1))
+                        })
+                        
+                        // 门锁状态
+                        Button(action: {
+                            let isLocked = getCarIsLocked(lock: carStatus.lock)
+                            carViewModel.carCtrl(ctrl: isLocked ? "unlock" : "lock")
+                        }, label: {
+                            FunctionButtonView(type: .lock(isOn: !getCarIsLocked(lock: carStatus.lock)))
+                        })
+                        
+                        // 发动机状态
+                        Button(action: {
+                            
+                        }, label: {
+                            FunctionButtonView(type: .engine(isOn: carStatus.engine == 1))
+                        })
+                    }
+                    .frame(width: width)
                 }
             }
         }

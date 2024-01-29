@@ -21,6 +21,8 @@
 		C603F9162B33D8D4005A8B0A /* InformationToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */; };
 		C603F9182B33E393005A8B0A /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9172B33E393005A8B0A /* GearView.swift */; };
 		C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */; };
+		C63768172B67338E00B9B911 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63768162B67338E00B9B911 /* ColorExtension.swift */; };
+		C63768192B67374000B9B911 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63768182B67374000B9B911 /* StringExtension.swift */; };
 		C63DD7DD2B2934A40090858C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C63DD7DC2B2934A40090858C /* Alamofire */; };
 		C65180B02B289DC1001CF33B /* MazdaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180AF2B289DC1001CF33B /* MazdaApp.swift */; };
 		C65180B22B289DC1001CF33B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65180B12B289DC1001CF33B /* ContentView.swift */; };
@@ -75,6 +77,8 @@
 		C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToggleView.swift; sourceTree = "<group>"; };
 		C603F9172B33E393005A8B0A /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
 		C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionButtonView.swift; sourceTree = "<group>"; };
+		C63768162B67338E00B9B911 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		C63768182B67374000B9B911 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C65180AC2B289DC1001CF33B /* Mazda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65180AF2B289DC1001CF33B /* MazdaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazdaApp.swift; sourceTree = "<group>"; };
 		C65180B12B289DC1001CF33B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,7 +145,6 @@
 				C603F9122B33D7FF005A8B0A /* View */,
 				C603F90C2B32DE8E005A8B0A /* CarModel.swift */,
 				C603F90E2B32DF33005A8B0A /* CarViewModel.swift */,
-				C653C5262B5AB77D00938193 /* FuelView.swift */,
 				C653C52E2B5B6EE200938193 /* CarContentView.swift */,
 				C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */,
 			);
@@ -157,8 +160,18 @@
 				C603F9132B33D812005A8B0A /* PercentageRectangleView.swift */,
 				C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */,
 				C603F9172B33E393005A8B0A /* GearView.swift */,
+				C653C5262B5AB77D00938193 /* FuelView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C63768152B67337100B9B911 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C63768162B67338E00B9B911 /* ColorExtension.swift */,
+				C63768182B67374000B9B911 /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C63DD7D92B2934480090858C /* Network */ = {
@@ -197,6 +210,7 @@
 		C65180AE2B289DC1001CF33B /* Mazda */ = {
 			isa = PBXGroup;
 			children = (
+				C63768152B67337100B9B911 /* Extension */,
 				C688A9CD2B58C6E700F9E550 /* Bluetooth */,
 				C63DD7D92B2934480090858C /* Network */,
 				C653C5382B5C0F6800938193 /* Light */,
@@ -395,6 +409,7 @@
 			files = (
 				C603F9142B33D812005A8B0A /* PercentageRectangleView.swift in Sources */,
 				C65180B22B289DC1001CF33B /* ContentView.swift in Sources */,
+				C63768192B67374000B9B911 /* StringExtension.swift in Sources */,
 				C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */,
 				C653C5272B5AB77D00938193 /* FuelView.swift in Sources */,
 				C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */,
@@ -404,6 +419,7 @@
 				C653C5332B5B743000938193 /* BluetoothEnvironment.swift in Sources */,
 				C603F8F92B3186AA005A8B0A /* ServiceEnvironment.swift in Sources */,
 				C653C52F2B5B6EE200938193 /* CarContentView.swift in Sources */,
+				C63768172B67338E00B9B911 /* ColorExtension.swift in Sources */,
 				C603F8F32B317BA8005A8B0A /* Service.swift in Sources */,
 				C603F9012B327D09005A8B0A /* ServiceRequestBuilder.swift in Sources */,
 				C653C5372B5B8AA000938193 /* ColorPickerView.swift in Sources */,
