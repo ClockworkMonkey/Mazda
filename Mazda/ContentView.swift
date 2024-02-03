@@ -25,6 +25,10 @@ struct ContentView: View {
                     Text("灯光")
                 }
         }
+        .tint(Color("ColorSet_Function_Foreground"))
+        .onAppear(){
+            UITabBar.appearance().unselectedItemTintColor = UIColor(Color("ColorSet_Text"))
+        }
     }
 }
 

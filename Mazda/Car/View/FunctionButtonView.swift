@@ -60,7 +60,7 @@ enum FunctionButtonType {
     }
     
     var color: Color {
-        return isOn ? .blue : .gray
+        return isOn ? Color("ColorSet_Function_Background_On") : Color("ColorSet_Function_Background_Off")
     }
     
     private var isOn: Bool {
@@ -109,7 +109,7 @@ struct FunctionButtonView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(10)
                 .frame(width: geometry.size.width, height: 70)
-                .foregroundColor(.white)
+                .foregroundColor(Color("ColorSet_Function_Foreground"))
                 .background(type.color)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
@@ -117,5 +117,5 @@ struct FunctionButtonView: View {
 }
 
 #Preview {
-    FunctionButtonView(type: .window(isOn: true))
+    FunctionButtonView(type: .window(isOn: false))
 }

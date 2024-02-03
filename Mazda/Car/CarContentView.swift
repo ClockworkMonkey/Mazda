@@ -17,10 +17,7 @@ struct CarContentView: View {
                 Image("MazdaCX-5")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding()
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(Color(hex: 0x45d9fd))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
                 
                 HStack {
                     Image(systemName: "person.badge.clock")
@@ -30,7 +27,7 @@ struct CarContentView: View {
                     
                     Spacer()
                 }
-                .foregroundColor(Color(hex: 0x52616a))
+                .foregroundColor(Color("ColorSet_Text"))
                 
                 HStack {
                     Image(systemName: "location")
@@ -45,7 +42,7 @@ struct CarContentView: View {
                     
                     Spacer()
                 }
-                .foregroundColor(Color(hex: 0x52616a))
+                .foregroundColor(Color("ColorSet_Text"))
                 
                 Spacer()
                 
@@ -72,11 +69,11 @@ struct CarContentView: View {
                 Text(carViewModel.status)
                     .font(.title)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .foregroundColor(Color(hex: 0x52616a))
+                    .foregroundColor(Color("ColorSet_Text"))
             }
         }
         .padding(.horizontal)
-        .background(Color(hex: 0x1e2022))
+        .background(Color("ColorSet_View_Background"))
     }
 }
 

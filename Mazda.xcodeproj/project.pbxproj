@@ -279,9 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				C65180AE2B289DC1001CF33B /* Mazda */,
+				C62CDE982B6E27B80024B236 /* CarWidget */,
 				C65180C02B289DC2001CF33B /* MazdaTests */,
 				C65180CA2B289DC2001CF33B /* MazdaUITests */,
-				C62CDE982B6E27B80024B236 /* CarWidget */,
 				C62CDE932B6E27B80024B236 /* Frameworks */,
 				C65180AD2B289DC1001CF33B /* Products */,
 			);

@@ -83,8 +83,8 @@ struct FuelView: View {
             }
         }
         .padding(10.0)
-        .foregroundColor(.white)
-        .background(Color.blue)
+        .foregroundColor(Color("ColorSet_Function_Foreground"))
+        .background(Color("ColorSet_Function_Background_On"))
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

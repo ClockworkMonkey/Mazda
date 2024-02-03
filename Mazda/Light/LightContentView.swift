@@ -15,6 +15,8 @@ struct LightContentView: View {
 
     var body: some View {
         VStack {
+            Spacer()
+            
             HStack {
                 Button(action: {
                     bluetoothManager.startScan()
@@ -99,6 +101,7 @@ struct LightContentView: View {
             
             LightSingleColorView()
         }
+        .background(Color("ColorSet_View_Background"))
     }
 }
 

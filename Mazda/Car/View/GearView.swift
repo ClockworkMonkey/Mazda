@@ -21,8 +21,8 @@ struct GearView: View {
                             Text(gear)
                                 .frame(width: geometry.size.width, height: geometry.size.height)
                                 .font(.largeTitle)
-                                .foregroundColor(Color.white)
-                                .background(gear == self.gear ? Color.blue : Color.black)
+                                .foregroundColor(Color("ColorSet_Function_Foreground"))
+                                .background(gear == self.gear ? Color("ColorSet_Function_Background_On") : Color("ColorSet_Function_Background_Off"))
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                     }
