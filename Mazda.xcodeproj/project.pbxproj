@@ -22,6 +22,14 @@
 		C603F9182B33E393005A8B0A /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9172B33E393005A8B0A /* GearView.swift */; };
 		C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */; };
 		C611C5F72B6DDFEB0079B664 /* UserRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */; };
+		C62CDE952B6E27B80024B236 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62CDE942B6E27B80024B236 /* WidgetKit.framework */; };
+		C62CDE972B6E27B80024B236 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62CDE962B6E27B80024B236 /* SwiftUI.framework */; };
+		C62CDE9A2B6E27B80024B236 /* CarWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62CDE992B6E27B80024B236 /* CarWidgetBundle.swift */; };
+		C62CDE9C2B6E27B80024B236 /* CarWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62CDE9B2B6E27B80024B236 /* CarWidgetLiveActivity.swift */; };
+		C62CDE9E2B6E27B80024B236 /* CarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62CDE9D2B6E27B80024B236 /* CarWidget.swift */; };
+		C62CDEA02B6E27B80024B236 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62CDE9F2B6E27B80024B236 /* AppIntent.swift */; };
+		C62CDEA22B6E27B90024B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62CDEA12B6E27B90024B236 /* Assets.xcassets */; };
+		C62CDEA62B6E27B90024B236 /* CarWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C62CDE922B6E27B80024B236 /* CarWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C63768172B67338E00B9B911 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63768162B67338E00B9B911 /* ColorExtension.swift */; };
 		C63768192B67374000B9B911 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63768182B67374000B9B911 /* StringExtension.swift */; };
 		C63DD7DD2B2934A40090858C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C63DD7DC2B2934A40090858C /* Alamofire */; };
@@ -47,6 +55,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C62CDEA42B6E27B90024B236 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C65180A42B289DC1001CF33B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C62CDE912B6E27B80024B236;
+			remoteInfo = CarWidgetExtension;
+		};
 		C65180BE2B289DC2001CF33B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C65180A42B289DC1001CF33B /* Project object */;
@@ -62,6 +77,20 @@
 			remoteInfo = Mazda;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C62CDEA72B6E27B90024B236 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C62CDEA62B6E27B90024B236 /* CarWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C603F8EE2B301CE9005A8B0A /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
@@ -79,6 +108,15 @@
 		C603F9172B33E393005A8B0A /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
 		C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionButtonView.swift; sourceTree = "<group>"; };
 		C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleModel.swift; sourceTree = "<group>"; };
+		C62CDE922B6E27B80024B236 /* CarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62CDE942B6E27B80024B236 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C62CDE962B6E27B80024B236 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C62CDE992B6E27B80024B236 /* CarWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarWidgetBundle.swift; sourceTree = "<group>"; };
+		C62CDE9B2B6E27B80024B236 /* CarWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		C62CDE9D2B6E27B80024B236 /* CarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarWidget.swift; sourceTree = "<group>"; };
+		C62CDE9F2B6E27B80024B236 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		C62CDEA12B6E27B90024B236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C62CDEA32B6E27B90024B236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C63768162B67338E00B9B911 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C63768182B67374000B9B911 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C65180AC2B289DC1001CF33B /* Mazda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +145,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C62CDE8F2B6E27B80024B236 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62CDE972B6E27B80024B236 /* SwiftUI.framework in Frameworks */,
+				C62CDE952B6E27B80024B236 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C65180A92B289DC1001CF33B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +215,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C62CDE932B6E27B80024B236 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C62CDE942B6E27B80024B236 /* WidgetKit.framework */,
+				C62CDE962B6E27B80024B236 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C62CDE982B6E27B80024B236 /* CarWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C62CDE992B6E27B80024B236 /* CarWidgetBundle.swift */,
+				C62CDE9B2B6E27B80024B236 /* CarWidgetLiveActivity.swift */,
+				C62CDE9D2B6E27B80024B236 /* CarWidget.swift */,
+				C62CDE9F2B6E27B80024B236 /* AppIntent.swift */,
+				C62CDEA12B6E27B90024B236 /* Assets.xcassets */,
+				C62CDEA32B6E27B90024B236 /* Info.plist */,
+			);
+			path = CarWidget;
+			sourceTree = "<group>";
+		};
 		C63768152B67337100B9B911 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +281,8 @@
 				C65180AE2B289DC1001CF33B /* Mazda */,
 				C65180C02B289DC2001CF33B /* MazdaTests */,
 				C65180CA2B289DC2001CF33B /* MazdaUITests */,
+				C62CDE982B6E27B80024B236 /* CarWidget */,
+				C62CDE932B6E27B80024B236 /* Frameworks */,
 				C65180AD2B289DC1001CF33B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -222,6 +293,7 @@
 				C65180AC2B289DC1001CF33B /* Mazda.app */,
 				C65180BD2B289DC2001CF33B /* MazdaTests.xctest */,
 				C65180C72B289DC2001CF33B /* MazdaUITests.xctest */,
+				C62CDE922B6E27B80024B236 /* CarWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,6 +365,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C62CDE912B6E27B80024B236 /* CarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62CDEAA2B6E27B90024B236 /* Build configuration list for PBXNativeTarget "CarWidgetExtension" */;
+			buildPhases = (
+				C62CDE8E2B6E27B80024B236 /* Sources */,
+				C62CDE8F2B6E27B80024B236 /* Frameworks */,
+				C62CDE902B6E27B80024B236 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarWidgetExtension;
+			productName = CarWidgetExtension;
+			productReference = C62CDE922B6E27B80024B236 /* CarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C65180AB2B289DC1001CF33B /* Mazda */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C65180D12B289DC2001CF33B /* Build configuration list for PBXNativeTarget "Mazda" */;
@@ -300,10 +389,12 @@
 				C65180A82B289DC1001CF33B /* Sources */,
 				C65180A92B289DC1001CF33B /* Frameworks */,
 				C65180AA2B289DC1001CF33B /* Resources */,
+				C62CDEA72B6E27B90024B236 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C62CDEA52B6E27B90024B236 /* PBXTargetDependency */,
 			);
 			name = Mazda;
 			packageProductDependencies = (
@@ -356,9 +447,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					C62CDE912B6E27B80024B236 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					C65180AB2B289DC1001CF33B = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -389,6 +483,7 @@
 			projectRoot = "";
 			targets = (
 				C65180AB2B289DC1001CF33B /* Mazda */,
+				C62CDE912B6E27B80024B236 /* CarWidgetExtension */,
 				C65180BC2B289DC2001CF33B /* MazdaTests */,
 				C65180C62B289DC2001CF33B /* MazdaUITests */,
 			);
@@ -396,6 +491,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C62CDE902B6E27B80024B236 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62CDEA22B6E27B90024B236 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C65180AA2B289DC1001CF33B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +525,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C62CDE8E2B6E27B80024B236 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62CDE9A2B6E27B80024B236 /* CarWidgetBundle.swift in Sources */,
+				C62CDEA02B6E27B80024B236 /* AppIntent.swift in Sources */,
+				C62CDE9E2B6E27B80024B236 /* CarWidget.swift in Sources */,
+				C62CDE9C2B6E27B80024B236 /* CarWidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C65180A82B289DC1001CF33B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +594,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C62CDEA52B6E27B90024B236 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = C62CDE912B6E27B80024B236 /* CarWidgetExtension */;
+			targetProxy = C62CDEA42B6E27B90024B236 /* PBXContainerItemProxy */;
+		};
 		C65180BF2B289DC2001CF33B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C65180AB2B289DC1001CF33B /* Mazda */;
@@ -493,6 +613,65 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C62CDEA82B6E27B90024B236 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q569HPLMA9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.logorhythms.Mazda.CarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C62CDEA92B6E27B90024B236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q569HPLMA9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.logorhythms.Mazda.CarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		C65180CF2B289DC2001CF33B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -612,6 +791,7 @@
 		C65180D22B289DC2001CF33B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mazda/Mazda.entitlements;
@@ -653,6 +833,7 @@
 		C65180D32B289DC2001CF33B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Mazda/Mazda.entitlements;
@@ -788,6 +969,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C62CDEAA2B6E27B90024B236 /* Build configuration list for PBXNativeTarget "CarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62CDEA82B6E27B90024B236 /* Debug */,
+				C62CDEA92B6E27B90024B236 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C65180A72B289DC1001CF33B /* Build configuration list for PBXProject "Mazda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

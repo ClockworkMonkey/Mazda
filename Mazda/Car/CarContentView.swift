@@ -14,7 +14,7 @@ struct CarContentView: View {
     var body: some View {
         VStack(spacing: 15) {
             if let carStatus = carViewModel.carStatus?.data {
-                Image(systemName: "car")
+                Image("MazdaCX-5")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
@@ -38,11 +38,16 @@ struct CarContentView: View {
                     if let userRole = userViewModel.userRole {
                         Text(userRole.data?.carinfo.lastPosition ?? "未知")
                             .font(.footnote)
+                    } else {
+                        Text("未知")
+                            .font(.footnote)
                     }
                     
                     Spacer()
                 }
                 .foregroundColor(Color(hex: 0x52616a))
+                
+                Spacer()
                 
                 HStack {
                     // 车速
