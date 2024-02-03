@@ -9,29 +9,40 @@ import SwiftUI
 
 struct CarContentView: View {
     @ObservedObject var carViewModel = CarViewModel()
+    @ObservedObject var userViewModel = UserViewModel()
     
     var body: some View {
         VStack(spacing: 15) {
             if let carStatus = carViewModel.carStatus?.data {
-                HStack {
-                    Image(systemName: "wifi")
-                        .foregroundColor(.blue)
-                    
-                    Spacer()
-                    
-                    Text("更新时间：" + String.convertTimestamp(timestamp: TimeInterval(carStatus.time)))
-                        .font(.body)
-                        .foregroundColor(.white)
-                }
-                
                 Image(systemName: "car")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
+                    .foregroundColor(Color(hex: 0x45d9fd))
                     .clipShape(RoundedRectangle(cornerRadius: 15))
+                
+                HStack {
+                    Image(systemName: "person.badge.clock")
+                    
+                    Text(String.convertTimestamp(timestamp: TimeInterval(carStatus.time)))
+                        .font(.footnote)
+                    
+                    Spacer()
+                }
+                .foregroundColor(Color(hex: 0x52616a))
+                
+                HStack {
+                    Image(systemName: "location")
+                    
+                    if let userRole = userViewModel.userRole {
+                        Text(userRole.data?.carinfo.lastPosition ?? "未知")
+                            .font(.footnote)
+                    }
+                    
+                    Spacer()
+                }
+                .foregroundColor(Color(hex: 0x52616a))
                 
                 HStack {
                     // 车速
@@ -46,15 +57,17 @@ struct CarContentView: View {
                 
                 // 油量、里程
                 FuelView(milegage: carStatus.mileage, oil: carStatus.oil)
+                    .frame(maxHeight: 160)
                 
                 // 功能按键
                 FunctionView(carStatus: carStatus)
+                    .frame(maxHeight: 160)
             } else {
                 // 网络请求状态
                 Text(carViewModel.status)
                     .font(.title)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(hex: 0x52616a))
             }
         }
         .padding(.horizontal)

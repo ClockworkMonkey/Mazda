@@ -15,7 +15,7 @@ struct FunctionView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(spacing: 10) {
                 let width = (geometry.size.width - 30) / 4
                 
                 HStack(spacing: 10) {

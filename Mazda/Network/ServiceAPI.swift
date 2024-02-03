@@ -10,6 +10,7 @@ import Foundation
 
 enum ServiceAPI {
     case userInfo
+    case userRole
     case carStatus
     case carCtrl(ctrl: String)
 }
@@ -19,6 +20,8 @@ extension ServiceAPI: ServiceRequestBuilder {
         switch self {
         case .userInfo:
             return "/user/appSyncUserInfo"
+        case .userRole:
+            return "/wxxcx/UserRoleAuthList"
         case .carStatus:
             return "/car/status"
         case .carCtrl:
@@ -29,6 +32,8 @@ extension ServiceAPI: ServiceRequestBuilder {
     var parameters: Parameters? {
         switch self {
         case .userInfo:
+            return nil
+        case .userRole:
             return nil
         case .carStatus:
             return [
@@ -47,6 +52,8 @@ extension ServiceAPI: ServiceRequestBuilder {
         switch self {
         case .userInfo:
             return HTTPMethod.post
+        case .userRole:
+            return HTTPMethod.get
         case .carStatus:
             return HTTPMethod.get
         case .carCtrl:

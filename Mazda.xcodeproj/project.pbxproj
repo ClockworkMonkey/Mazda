@@ -21,6 +21,7 @@
 		C603F9162B33D8D4005A8B0A /* InformationToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */; };
 		C603F9182B33E393005A8B0A /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9172B33E393005A8B0A /* GearView.swift */; };
 		C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */; };
+		C611C5F72B6DDFEB0079B664 /* UserRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */; };
 		C63768172B67338E00B9B911 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63768162B67338E00B9B911 /* ColorExtension.swift */; };
 		C63768192B67374000B9B911 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63768182B67374000B9B911 /* StringExtension.swift */; };
 		C63DD7DD2B2934A40090858C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C63DD7DC2B2934A40090858C /* Alamofire */; };
@@ -77,6 +78,7 @@
 		C603F9152B33D8D4005A8B0A /* InformationToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationToggleView.swift; sourceTree = "<group>"; };
 		C603F9172B33E393005A8B0A /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
 		C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionButtonView.swift; sourceTree = "<group>"; };
+		C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleModel.swift; sourceTree = "<group>"; };
 		C63768162B67338E00B9B911 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C63768182B67374000B9B911 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C65180AC2B289DC1001CF33B /* Mazda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mazda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			children = (
 				C603F9042B32955C005A8B0A /* UserViewModel.swift */,
 				C603F9092B32C243005A8B0A /* UserModel.swift */,
+				C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				C653C53A2B5C101000938193 /* LightSingleColorView.swift in Sources */,
 				C603F90F2B32DF33005A8B0A /* CarViewModel.swift in Sources */,
 				C6782C4B2B6529B400AA6C81 /* CarHomeView.swift in Sources */,
+				C611C5F72B6DDFEB0079B664 /* UserRoleModel.swift in Sources */,
 				C603F9072B32BF0E005A8B0A /* ServiceError.swift in Sources */,
 				C603F8EF2B301CE9005A8B0A /* ResultModel.swift in Sources */,
 				C603F90D2B32DE8E005A8B0A /* CarModel.swift in Sources */,
