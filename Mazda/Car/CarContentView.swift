@@ -32,8 +32,25 @@ struct CarContentView: View {
                 HStack {
                     Image(systemName: "location")
                     
-                    if let userRole = userViewModel.userRole {
-                        Text(userRole.data?.carinfo.lastPosition ?? "未知")
+                    if let locationData = carViewModel.carLocation?.data {
+                        Text(locationData.address)
+                            .font(.footnote)
+                    } else {
+                        Text("未知")
+                            .font(.footnote)
+                    }
+                    
+                    Spacer()
+                }
+                .foregroundColor(Color("ColorSet_Text"))
+                
+                HStack {
+                    Image(systemName: "location")
+                    
+                    if let locationData = carViewModel.carLocation?.data {
+                        Text("经度：" + locationData.longitude)
+                            .font(.footnote)
+                        Text("纬度：" + locationData.latitude)
                             .font(.footnote)
                     } else {
                         Text("未知")

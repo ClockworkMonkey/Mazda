@@ -22,6 +22,7 @@
 		C603F9182B33E393005A8B0A /* GearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C603F9172B33E393005A8B0A /* GearView.swift */; };
 		C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */; };
 		C611C5F72B6DDFEB0079B664 /* UserRoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */; };
+		C61238562B6FA4B8006196FD /* CarLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61238552B6FA4B8006196FD /* CarLocation.swift */; };
 		C62CDE952B6E27B80024B236 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62CDE942B6E27B80024B236 /* WidgetKit.framework */; };
 		C62CDE972B6E27B80024B236 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62CDE962B6E27B80024B236 /* SwiftUI.framework */; };
 		C62CDE9A2B6E27B80024B236 /* CarWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62CDE992B6E27B80024B236 /* CarWidgetBundle.swift */; };
@@ -108,6 +109,7 @@
 		C603F9172B33E393005A8B0A /* GearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearView.swift; sourceTree = "<group>"; };
 		C60E53F12B3E4E8C00938134 /* FunctionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionButtonView.swift; sourceTree = "<group>"; };
 		C611C5F62B6DDFEB0079B664 /* UserRoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleModel.swift; sourceTree = "<group>"; };
+		C61238552B6FA4B8006196FD /* CarLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarLocation.swift; sourceTree = "<group>"; };
 		C62CDE922B6E27B80024B236 /* CarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62CDE942B6E27B80024B236 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C62CDE962B6E27B80024B236 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -251,6 +253,7 @@
 			children = (
 				C603F8EE2B301CE9005A8B0A /* ResultModel.swift */,
 				C603F90C2B32DE8E005A8B0A /* CarModel.swift */,
+				C61238552B6FA4B8006196FD /* CarLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				C60E53F22B3E4E8C00938134 /* FunctionButtonView.swift in Sources */,
 				C653C5272B5AB77D00938193 /* FuelView.swift in Sources */,
 				C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */,
+				C61238562B6FA4B8006196FD /* CarLocation.swift in Sources */,
 				C603F9182B33E393005A8B0A /* GearView.swift in Sources */,
 				C603F9052B32955C005A8B0A /* UserViewModel.swift in Sources */,
 				C653C52B2B5B515900938193 /* SpeedView.swift in Sources */,

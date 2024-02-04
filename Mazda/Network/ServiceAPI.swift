@@ -12,6 +12,7 @@ enum ServiceAPI {
     case userInfo
     case userRole
     case carStatus
+    case carLocation
     case carCtrl(ctrl: String)
 }
 
@@ -22,6 +23,8 @@ extension ServiceAPI: ServiceRequestBuilder {
             return "/user/appSyncUserInfo"
         case .userRole:
             return "/wxxcx/UserRoleAuthList"
+        case .carLocation:
+            return "/car/location"
         case .carStatus:
             return "/car/status"
         case .carCtrl:
@@ -35,6 +38,11 @@ extension ServiceAPI: ServiceRequestBuilder {
             return nil
         case .userRole:
             return nil
+        case .carLocation:
+            return [
+                "carid": "1327407",
+                "map_type": "1"
+            ]
         case .carStatus:
             return [
                 "carid": "1327407"
@@ -53,6 +61,8 @@ extension ServiceAPI: ServiceRequestBuilder {
         case .userInfo:
             return HTTPMethod.post
         case .userRole:
+            return HTTPMethod.get
+        case .carLocation:
             return HTTPMethod.get
         case .carStatus:
             return HTTPMethod.get
