@@ -26,7 +26,6 @@ class CarViewModel: ObservableObject {
     private var service: Service = Service.shared
     
     init() {
-        print("xxxxxx")
         self.getCarStatus()
         self.getCarLocation()
     }

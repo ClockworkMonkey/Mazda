@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CarContentView: View {
     @ObservedObject var carViewModel = CarViewModel()
-    @ObservedObject var userViewModel = UserViewModel()
     
     var body: some View {
         VStack(spacing: 15) {
@@ -61,8 +60,6 @@ struct CarContentView: View {
                 }
                 .foregroundColor(Color("ColorSet_Text"))
                 
-                Spacer()
-                
                 HStack {
                     // 车速
                     SpeedView(speed: carStatus.speed)
@@ -81,6 +78,7 @@ struct CarContentView: View {
                 // 功能按键
                 FunctionView(carStatus: carStatus)
                     .frame(maxHeight: 160)
+                    .environmentObject(carViewModel)
             } else {
                 // 网络请求状态
                 Text(carViewModel.status)

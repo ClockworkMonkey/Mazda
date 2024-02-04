@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FunctionView: View {
-    @ObservedObject var carViewModel = CarViewModel()
+    @EnvironmentObject var carViewModel: CarViewModel
     @State var carStatus: CarStatus
     
     // 车门锁、后备箱、引擎、车窗、寻车
