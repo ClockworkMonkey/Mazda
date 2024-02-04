@@ -39,14 +39,17 @@ struct FunctionView: View {
                     Group {
                         // 车窗
                         Button(action: {
-
+                            carViewModel.carCtrl(ctrl: "rise_window")
+                            // carViewModel.carCtrl(ctrl: "drop_window")
                         }, label: {
                             FunctionButtonView(type: .window(isOn: !getWindowIsLocked(window: carStatus.window)))
                         })
                         
                         // 后备箱
                         Button(action: {
-
+                            if !getCarIsLocked(lock: carStatus.lock) {
+                                carViewModel.carCtrl(ctrl: "trunk_toggle")
+                            }
                         }, label: {
                             FunctionButtonView(type: .rearTrunk(isOn: carStatus.door.trunk == 1))
                         })
