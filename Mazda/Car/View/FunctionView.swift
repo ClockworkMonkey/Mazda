@@ -64,7 +64,8 @@ struct FunctionView: View {
                         
                         // 发动机状态
                         Button(action: {
-                            
+                            let isLocked = getCarIsLocked(lock: carStatus.lock)
+                            carViewModel.carCtrl(ctrl: isLocked ? "stall" : "start")
                         }, label: {
                             FunctionButtonView(type: .engine(isOn: carStatus.engine == 1))
                         })

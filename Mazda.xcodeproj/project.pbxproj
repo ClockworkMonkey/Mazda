@@ -50,6 +50,7 @@
 		C653C5352B5B848A00938193 /* BluetoothLightAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5342B5B848A00938193 /* BluetoothLightAPI.swift */; };
 		C653C5372B5B8AA000938193 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5362B5B8AA000938193 /* ColorPickerView.swift */; };
 		C653C53A2B5C101000938193 /* LightSingleColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653C5392B5C101000938193 /* LightSingleColorView.swift */; };
+		C65BB1BD2B8722D100935C68 /* CarWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62CDE9B2B6E27B80024B236 /* CarWidgetLiveActivity.swift */; };
 		C6782C4B2B6529B400AA6C81 /* CarHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */; };
 		C688A9D12B58C75700F9E550 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688A9D02B58C75700F9E550 /* BluetoothManager.swift */; };
 		C688A9D32B5A9C4300F9E550 /* BluetoothPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */; };
@@ -141,6 +142,7 @@
 		C653C5342B5B848A00938193 /* BluetoothLightAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothLightAPI.swift; sourceTree = "<group>"; };
 		C653C5362B5B8AA000938193 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		C653C5392B5C101000938193 /* LightSingleColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSingleColorView.swift; sourceTree = "<group>"; };
+		C65BB1BC2B86F37C00935C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6782C4A2B6529B400AA6C81 /* CarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHomeView.swift; sourceTree = "<group>"; };
 		C688A9D02B58C75700F9E550 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		C688A9D22B5A9C4300F9E550 /* BluetoothPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheral.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		C65180AE2B289DC1001CF33B /* Mazda */ = {
 			isa = PBXGroup;
 			children = (
+				C65BB1BC2B86F37C00935C68 /* Info.plist */,
 				C63768152B67337100B9B911 /* Extension */,
 				C688A9CD2B58C6E700F9E550 /* Bluetooth */,
 				C63DD7D92B2934480090858C /* Network */,
@@ -562,6 +565,7 @@
 				C653C5372B5B8AA000938193 /* ColorPickerView.swift in Sources */,
 				C653C5352B5B848A00938193 /* BluetoothLightAPI.swift in Sources */,
 				C603F9162B33D8D4005A8B0A /* InformationToggleView.swift in Sources */,
+				C65BB1BD2B8722D100935C68 /* CarWidgetLiveActivity.swift in Sources */,
 				C653C53A2B5C101000938193 /* LightSingleColorView.swift in Sources */,
 				C603F90F2B32DF33005A8B0A /* CarViewModel.swift in Sources */,
 				C6782C4B2B6529B400AA6C81 /* CarHomeView.swift in Sources */,
@@ -807,8 +811,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mazda/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "蓝牙2";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "蓝牙";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -849,8 +855,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mazda/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "蓝牙2";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "蓝牙";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

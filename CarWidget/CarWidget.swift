@@ -38,15 +38,20 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct CarWidgetEntryView : View {
+    @Environment(\.widgetFamily) var widgetFamily: WidgetFamily
     var entry: Provider.Entry
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+            HStack {
+                Text("Time:")
+                Text(entry.date, style: .time)
+            }
 
             Text("Favorite Emoji:")
             Text(entry.configuration.favoriteEmoji)
+            
+            Text(widgetFamily.description)
         }
     }
 }
@@ -59,6 +64,9 @@ struct CarWidget: Widget {
             CarWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+        .configurationDisplayName(Text("显示名称"))
+        .description(Text("小组件描述"))
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge])
     }
 }
 

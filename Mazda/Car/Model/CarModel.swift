@@ -19,7 +19,8 @@ struct CarCtrl: Codable {
 
 // MARK: - DataClass
 struct CarStatus: Codable {
-    let oil, gear, engineSpeed, bat: String
+    let oil, gear, bat: String
+    let engineSpeed: NumberOrString
     let tempIn, tempOut: String
     let window: Window
     let online: String
@@ -31,15 +32,12 @@ struct CarStatus: Codable {
     let repair, relay, alarm, engine: Int
     let airConditioner: AirConditioner
     let seat: Seat
-    let obdNoticeNum, noticeNum: Int
 
     enum CodingKeys: String, CodingKey {
         case oil, gear, engineSpeed, bat
         case tempIn = "temp_in"
         case tempOut = "temp_out"
         case window, online, time, speed, mileage, seatWheel, lbs, gps, lock, door, repair, relay, alarm, engine, airConditioner, seat
-        case obdNoticeNum = "obd_notice_num"
-        case noticeNum = "notice_num"
     }
 }
 
@@ -104,4 +102,29 @@ struct SeatWheel: Codable {
 struct Window: Codable {
     let lf, lr, rf, rr: Int
     let sr, srs: Int
+}
+
+enum NumberOrString: Codable {
+    case number(Int)
+    case string(String)
+
+    init(from decoder: Decoder) throws {
+        if let intValue = try? decoder.singleValueContainer().decode(Int.self) {
+            self = .number(intValue)
+        } else if let stringValue = try? decoder.singleValueContainer().decode(String.self) {
+            self = .string(stringValue)
+        } else {
+            throw DecodingError.typeMismatch(NumberOrString.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Engine speed should be either an integer or a string"))
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .number(let value):
+            try container.encode(value)
+        case .string(let value):
+            try container.encode(value)
+        }
+    }
 }
